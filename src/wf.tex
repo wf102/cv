@@ -1,0 +1,183 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\href{#2}{#1}} & #3 \\
+      \textit{\small#4}  \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingEd}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\href{#2}{#1}:} {#4} & #3 \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Will Ferguson} & \href{http://linkedin.com/in/will-ferguson-b9441b193}{LinkedIn} - \href{https://github.com/wf102}{Github} - \href{mailto:william.ferguson83@gmail.com}{william.ferguson83@gmail.com}\\
+\end{tabular*}
+
+\vspace{6pt}
+
+Computational scientist with 10+ years building simulation, modelling, and data systems across nuclear, defence, financial, and identity sectors. 
+Experienced in taking complex physical and mathematical problems from research to production code, with a track record across safety-critical, regulated, and data-intensive domains. 
+Skills include software engineering, data analysis, mathematical modelling, statistics, and machine learning. SC cleared.
+
+\vspace{6pt}
+
+\textbf{Languages: }{Python, Fortran, C++, R, Golang, SQL}
+
+\textbf{Tools: }{Linux, Git, Docker, GCP, CI/CD (Github Actions), Pipelines (Dagster), HPC (MPI, OpenMP)}%, Geospatial (QGIS, GeoPandas)
+
+\textbf{Sectors: }{Nuclear, Defence, Identity Tech, Proptec, Finance}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheadingEd
+      {Imperial College London / CERN}{https://www.imperial.ac.uk/}{2014}
+      {PhD, High Energy Physics}
+    \resumeSubheadingEd
+      {University of Birmingham}{https://www.birmingham.ac.uk/}{2008}
+      {MSc, Physics and Technology of Nuclear Reactors}
+    \resumeSubheadingEd
+      {Imperial College London}{https://www.imperial.ac.uk/}{2006}
+      {MSc, Advanced Mechanical Engineering}
+    \resumeSubheadingEd
+      {Imperial College London}{https://www.imperial.ac.uk/}{2005}
+      {BSc, Physics}
+  \resumeSubHeadingListEnd
+%
+
+%-----------EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Skyral (formerly Improbable Defence)}
+      {https://skyral.com/}
+      {Jan 2024 - Apr 2026}
+      {Software Engineer (Modelling)}
+      \resumeItemListStart
+        \item\small Dynamic route costing using the Valhalla open source routing engine
+        \item\small Development and validation of agent-based models for urban digital twins for populations of 5M+
+        \item\small Modelling of electrical power network for vulnerability analysis
+        \item\small Development of road network and synthetic population pipelines with Dagster
+    \resumeItemListEnd            
+
+    \resumeSubheading
+      {Jacobs}
+      {https://www.jacobs.com/}
+      {Jan 2021 - Jan 2024}
+      {Nuclear Reactor Physicist}
+      \resumeItemListStart
+        \item\small Development and support of a widely used Monte Carlo neutron transport and reactor physics code (MONK)
+        \item\small Implementation of a set of novel depletion solvers using numerical methods for increased speed and accuracy
+        \item\small Development of a new nuclear burnup data model, and corresponding new HDF5 interface file
+        \item\small Multiphysics coupling of neutronic and thermal-hydraulic codes
+        \item\small Delivery of customer training courses
+        \item\small Mentoring of interns
+    \resumeItemListEnd            
+
+    \resumeSubheading
+      {Yoti}
+      {https://www.yoti.com/}
+      {Sep 2014 - Sep 2019}
+      {Data Scientist}
+      \resumeItemListStart
+        \item\small PoC of identity ranking algorithm in (PageRank) in C++
+        \item\small Identity attribute confidence graph-based models (eg Bayesian networks, electrical networks)
+        \item\small Implementation and testing of Stellar Consensus Protocol (blockchain) in Golang 
+        \item\small Prediction market PoC in R (based on logarithmic market scoring rule)
+    \resumeItemListEnd            
+    
+    \resumeSubheading
+      {Homeseller}
+      {}
+      {Sep 2014 - Mar 2018}
+      {Data Scientist}
+      \resumeItemListStart
+        \item\small Design and implementation of proprietary home valuation algorithms to make sale and rental valuations for UK homes, using a repeat sales regression model (Python, R). Accuracy ±8\% (comparable with Zoopla estimates).
+    \resumeItemListEnd            
+
+    \resumeSubheading
+      {Gamesys}
+      {https://www.gamesysgroup.com/}
+      {Apr 2014 - Sep 2014}
+      {Financial Modeller (contract)}
+      \resumeItemListStart
+        \item\small Foreign exchange volatility modelling for a high frequency binary options trading platform
+    \resumeItemListEnd            
+
+    \resumeSubheading
+      {UKAEA Fusion, Culham}
+      {https://www.ukaea.org/}
+      {Jun 2008 - Sep 2008}
+      {Masters Student}
+      \resumeItemListStart
+        \item\small Development of a method for applying finite element neutron transport code to a CAD model of the ITER fusion reactor, for comparison with Monte Carlo modelling
+    \resumeItemListEnd            
+    
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
